@@ -9,7 +9,7 @@ import asyncio
 # --------------------
 # Configuration
 # --------------------
-TOKEN = "MTQxNTQwMjU0MzU3MTQwNjg2OQ.GygNer.Ok8I2GmZc74m3ni60uA-5iF-cHs130nS2mwDPM"  # hardcoded as requested
+TOKEN = None  # pulled from environment later (set DISCORD_TOKEN in your .env)
 CONFIG_FILE = "config.json"
 TICKETS_FILE = "tickets.json"
 MAX_TICKET_MESSAGE_LEN = 500
