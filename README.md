@@ -27,55 +27,71 @@ A fully featured Discord ticket system bot with:
 ```bash
 git clone https://github.com/your-username/discord-ticket-bot.git
 cd discord-ticket-bot
+````
 
-2. Create a virtual environment (optional but recommended)
+### 2. Create a virtual environment (optional but recommended)
+
+```bash
 python -m venv venv
 source venv/bin/activate   # Linux/Mac
 venv\Scripts\activate      # Windows
+```
 
-3. Install requirements
+### 3. Install requirements
+
+```bash
 pip install -r requirements.txt
+```
 
-4. Configure environment variables
+### 4. Configure environment variables
 
-Create a .env file in the project root:
+Create a `.env` file in the project root:
 
+```
 DISCORD_TOKEN=your_discord_bot_token_here
+```
 
+⚠️ Never commit your real `.env` file to GitHub!
 
-⚠️ Never commit your real .env file to GitHub!
+---
 
-▶️ Usage
+## ▶️ Usage
 
 Run the bot:
 
+```bash
 python main.py
+```
 
-🛠️ Commands
-Setup
+---
+
+## 🛠️ Commands
+
+### Setup
+
+```
 /setup ticket_channel:<#channel> allowed_roles:@Role,@User ping_roles:@Role ticket_limit:5
+```
 
-Admin Utilities
+### Admin Utilities
 
-/synccommands → force sync commands
+* `/synccommands` → force sync commands
+* `/wipeconfig` → reset config only
+* `/wipeticketstatus` → wipe tickets for a user
+* `/reseteverything` → delete all tickets + config
 
-/wipeconfig → reset config only
+### Ticket Commands
 
-/wipeticketstatus → wipe tickets for a user
+* `/close` → close a ticket channel
+* `/history` → show a user’s ticket history
+* `/addallowedrole` / `/removeallowedrole`
+* `/addpingedrole` / `/removepingedrole`
 
-/reseteverything → delete all tickets + config
+---
 
-Ticket Commands
+## 📁 Project Structure
 
-/close → close a ticket channel
-
-/history → show a user’s ticket history
-
-/addallowedrole / /removeallowedrole
-
-/addpingedrole / /removepingedrole
-
-📁 Project Structure
+```
 discord-ticket-bot/
 │── main.py
 │── requirements.txt
